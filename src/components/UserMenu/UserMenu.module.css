@@ -1,0 +1,26 @@
+.btnLogout {
+  font-family: inherit;
+  font-size: 20px;
+
+  display: block;
+  cursor: pointer;
+  background: rgb(62, 197, 255);
+  border-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+
+  transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btnLogout:hover,
+.btnLogout:focus {
+  background: rgb(62, 126, 255);
+}
+.userMenu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(166, 220, 243);
+  padding: 16px 0;
+}
