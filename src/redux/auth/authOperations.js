@@ -1,17 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { privateAPI, publicAPI, token } from 'redux/http';
+import { privateAPI, token } from 'redux/http';
 import { selectToken } from './authSelectors';
-
-const axiosUser = axios.create({
-  baseURL: 'https://connections-api.herokuapp.com',
-});
 
 export const registerUser = createAsyncThunk(
   'user/signup',
   async (body, { rejectWithValue }) => {
     try {
-      const { data } = await axiosUser.post('/users/signup', body);
+      const { data } = await privateAPI.post('/users/signup', body);
       token.set(data.token);
       return data;
     } catch (err) {
@@ -24,7 +19,7 @@ export const loginUser = createAsyncThunk(
   'auth/login',
   async (body, { rejectWithValue }) => {
     try {
-      const { data } = await publicAPI.post('/users/login', body);
+      const { data } = await privateAPI.post('/users/login', body);
       token.set(data.token);
       return data;
     } catch (err) {
