@@ -3,6 +3,7 @@ import { selectContacts, selectFilter, selectIsLoading } from 'redux/selector';
 import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
 import ContactItem from './ContactItem';
+import { selectIsAuth } from 'redux/auth/authSelectors';
 
 const Contacts = () => {
   const contacts = useSelector(selectContacts);
@@ -10,12 +11,15 @@ const Contacts = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
 
+  const isAuth = useSelector(selectIsAuth);
+
   useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+    if (isAuth) {
+      dispatch(fetchContacts());
+    }
+  }, [dispatch, isAuth]);
 
   const filterContacts = () => {
-    console.log(contacts);
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );

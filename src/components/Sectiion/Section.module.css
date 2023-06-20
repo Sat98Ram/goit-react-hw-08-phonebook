@@ -8,3 +8,8 @@
 .section:not(:last-child) {
   margin-bottom: 32px;
 }
+
+.section {
+  padding-left: 32px;
+  padding-right: 32px;
+}
