@@ -2,7 +2,6 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsAuth } from 'redux/auth/authSelectors';
 import { logOut } from 'redux/auth/authOperations';
-import { token } from 'redux/http';
 
 export const Layout = () => {
   const dispatch = useDispatch();
