@@ -1,4 +1,4 @@
-import Section from 'components/Sectiion/Section';
+import Section from 'components/Section/Section';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerUser } from 'redux/auth/authOperations';

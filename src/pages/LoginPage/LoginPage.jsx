@@ -1,7 +1,8 @@
-import Section from 'components/Sectiion/Section';
+import Section from 'components/Section/Section';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginUser } from 'redux/auth/authOperations';
+import css from './LoginPage.module.css';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -30,24 +31,28 @@ export const LoginPage = () => {
 
   return (
     <Section>
-      <form onSubmit={handleSubmit}>
-        <label>Email</label>
+      <form onSubmit={handleSubmit} className={css.loginForm}>
+        <label className={css.inputLabel}>Email</label>
         <input
           type="email"
           name="email"
           required
           value={email}
           onChange={handleChange}
+          className={css.loginInput}
         />
-        <label>Password</label>
+        <label className={css.inputLabel}>Password</label>
         <input
           type="password"
           name="password"
           required
           value={password}
           onChange={handleChange}
+          className={css.loginInput}
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit" className={css.BtnLogin}>
+          Sign Up
+        </button>
       </form>
     </Section>
   );

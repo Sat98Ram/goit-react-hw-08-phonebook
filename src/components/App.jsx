@@ -4,7 +4,7 @@ import { RegisterPage } from 'pages/RegisterPage';
 import { ContactsPage } from 'pages/ContactsPage';
 import PublicRoute from './PublicRoute/PublicRoute';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import { LoginPage } from 'pages/LoginPage';
+import { LoginPage } from 'pages/LoginPage/LoginPage';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsAuth } from 'redux/auth/authSelectors';
