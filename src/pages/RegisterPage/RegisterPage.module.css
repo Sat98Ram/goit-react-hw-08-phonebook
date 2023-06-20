@@ -1,4 +1,4 @@
-.loginForm {
+.registerForm {
   border: 1px solid black;
   padding: 12px 16px;
   width: 600px;
@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 
-.inputLabel {
+.registerLabel {
   font-size: 32px;
   font-weight: 400;
   line-height: 1;
@@ -14,7 +14,7 @@
   margin-bottom: 12px;
 }
 
-.loginInput {
+.registerInput {
   border: 1px solid rgba(33, 33, 33, 0.8);
   border-radius: 4px;
   font-weight: 400;
@@ -25,13 +25,13 @@
   box-sizing: border-box;
 }
 
-.loginInput:hover,
-.loginInput:focus {
+.registerInput:hover,
+.registerInput:focus {
   border-color: blue;
   outline: transparent;
 }
 
-.BtnLogin {
+.btnRegister {
   font-family: inherit;
   font-size: 20px;
   margin-left: auto;
@@ -45,7 +45,7 @@
   transition: background 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.BtnLogin:hover,
-.BtnLogin:focus {
+.btnRegister:hover,
+.btnRegister:focus {
   background: rgb(62, 126, 255);
 }

@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
-import { RegisterPage } from 'pages/RegisterPage';
+import { RegisterPage } from 'pages/RegisterPage/RegisterPage';
 import { ContactsPage } from 'pages/ContactsPage';
 import PublicRoute from './PublicRoute/PublicRoute';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
