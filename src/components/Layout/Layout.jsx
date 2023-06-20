@@ -7,7 +7,6 @@ import { token } from 'redux/http';
 export const Layout = () => {
   const dispatch = useDispatch();
   const isAuth = useSelector(selectIsAuth);
-
   const handleLogOut = () => {
     dispatch(logOut());
   };
